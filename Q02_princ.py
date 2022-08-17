@@ -5,7 +5,7 @@ capacElevador = int(input("Quantas pessoas suporta? "))
 
 elev01 = Elevador(totAndares=totalAndares, capElevador=capacElevador)
 while True:
-    opcao = int(input("[1]-ENTRAR [2]-SAIR [3]-SUBIR [4]-DESCER [0] ENCERRAR EXECUÇÃO"))
+    opcao = int(input("O QUE DESEJA FAZER?\n [1]-ENTRAR\n [2]-SAIR\n [3]-SUBIR\n [4]-DESCER\n [0] ENCERRAR EXECUÇÃO"))
     if opcao == 1:
         elev01.entra()
     elif opcao == 2:

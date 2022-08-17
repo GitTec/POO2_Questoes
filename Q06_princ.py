@@ -5,29 +5,27 @@ print("MINHA TELEVISÃO")
 print("-"*30)
 
 tv1 = Tv()
-pergunta = input("OLÁ TUDO BEM? DESEJA ASSISTIR TV? [S] - [N]")
-if pergunta == "S":
+pergunta = input("DESEJA ASSISTIR TV? [S] - [N]")
+print("-"*35)
+if pergunta == "S" or pergunta == "s":
     while True:
-        acoes = int(input(f"O QUE DESEJA FAZER?\n [1]-LIGAR TV\n [2]-DESLIGAR TV\n [3]-AUMENTAR VOLUME\n [4]-DIMINUIR VOLUME\n [5]-PASSAR CANAL\n [6]-VOLTAR CANAL\n [0]-SAIR\n "))
+        acoes = int(input(f"O QUE DESEJA FAZER?\n [1]-LIGAR/DESLIGAR TV\n [2]-AUMENTAR[+]/DIMINUIR VOLUME[-]\n [3]-PASSAR[>]/VOLTAR CANAL[<]\n [0]-SAIR\n "))
         if acoes == 1:
-            tv1.ligartv()
+            tv1.ligarDesligar()
         elif acoes == 2:
-            tv1.desligartv()
+            vol = input("Deseja aumentar [+] ou baixar [-] o volume? ")
+            tv1.altervolume(vol)
         elif acoes == 3:
-            tv1.aumentarvolume()
-        elif acoes == 4:
-            tv1.diminuirvolume()
-        elif acoes == 5:
-            tv1.passarcanal()
-        elif acoes == 6:
-            tv1.voltarcanal()
+            can = input("Deseja Passar [>] ou Voltar [<] canal?")
+            tv1.alterCanal(can)
         elif acoes == 0:
             print("SAINDO DA EXECUÇÃO!!")
             break
         else:
+            print("-"*20)
             print("AÇÃO INVÁLIDA!!!")
         tv1.exibirtv()
-elif pergunta == "N":
+elif pergunta == "N" or pergunta == "n":
     print("AH TUDO BEM, DECULPE PERGUNTAR")
 else:
-    print("ESCOLHA ERRADA!!!")
+    print("ESCOLHA ERRADA, [S] ou [N]!!!")

@@ -14,7 +14,7 @@ pessoa1 = Pessoa(nome=nomePessoa, dtNascimento=data, altura=totAltura, peso=totP
 
 while True:
     print("-"*45)
-    opcao = int(input("O QUE VOCÊ DESEJA FAZER [1]-CALCULAR IMC [2]-APRESENTAR [3]-ALTERAR SALÁRIO [0]-SAIR DA EXECUÇÃO "))
+    opcao = int(input("O QUE VOCÊ DESEJA FAZER?\n [1]-CALCULAR IMC\n [2]-APRESENTAR\n [3]-ALTERAR SALÁRIO\n [0]-SAIR DA EXECUÇÃO "))
     if opcao == 1:
         pessoa1.calcularimc()
     elif opcao == 2:
